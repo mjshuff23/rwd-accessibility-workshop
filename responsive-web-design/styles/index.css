@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #main-logo {
+    background: url('../images/rwd-main-logo-450x236.png') no-repeat;
+    width: auto;
+    padding-bottom: 20%;
+    background-size: contain;
+    /* height: 236px;
+    width: 450px; */
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  #main-logo {
+    background: url('../images/rwd-main-logo-600x314.png') no-repeat;
+    width: auto;
+    padding-bottom: 20%;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #main-logo {
+    background: url('../images/rwd-main-logo-1200x628.png') no-repeat;
+    width: auto;
+    padding-bottom: 20%;
+    background-size: contain;
+  }
+}

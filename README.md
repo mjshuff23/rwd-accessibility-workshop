@@ -6,9 +6,9 @@ A workshop geared toward making your application viewable on any device, whether
 
 - Understand the value of reaching the largest audience possible.
   - The product you sell/provide should be accessible to people on whatever media device they're using which means we need to utilize:
-    - Media Queries
-    - CSS Grid
-    - CSS Flexbox
+    - CSS Units - absolute, relative, and percentages
+    - Media Queries - adapating to different screen sizes
+    - CSS Grid and Flexbox - tools for a clean layout
     - RWD patterns
   - The product you sell/provide should be accessible to people regardless of any disabilities whether they are visual, auditory, physical, and even cognitive impairments.  It is imperative to think about everyone and try to reach out for a multitude of reasons:
     - By following as many laws as you can in the various countries that have internet users, your site and the company you work for can be safe from any legal proceedings that might come up against you.
