@@ -11,25 +11,45 @@ html {
 	box-sizing: inherit;
 }
 
+/* Mobile */
 @media screen and (max-width: 480px) {
 	#main-logo {
-		background: url('../images/rwd-main-logo-450x236.png') no-repeat;
+		background: url('./images/rwd-main-logo-450x236.png') no-repeat;
+    max-width: 100%;
 	}
 }
 
+
+/* Tablet */
 @media screen and (min-width: 480px) and (max-width: 1024px) {
 	#main-logo {
-		background: url('../images/rwd-main-logo-600x314.png') no-repeat;
+		background: url('./images/rwd-main-logo-600x314.png') no-repeat;
+    max-width: 100%;
 	}
 }
 
+
+/* Desktop */
 @media screen and (min-width: 1025px) {
 	#main-logo {
-		background: url('../images/rwd-main-logo-1200x628.png') no-repeat;
+		background: url('./images/rwd-main-logo-1200x628.png') no-repeat;
+    max-width: 100%;
 	}
 }
 
 #main-logo {
-	padding-bottom: 50%;
+	padding-bottom: 56.25%;
 	background-size: contain;
+}
+
+#site-header {
+	font-size: 7vw;
+}
+
+#main-header, #section-two-header {
+	font-size: 5vw;
+}
+
+p {
+	font-size: 3vw;
 }
