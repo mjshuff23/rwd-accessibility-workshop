@@ -11,6 +11,16 @@ html {
 	box-sizing: inherit;
 }
 
+#happy-kitty-image {
+	max-width: 100%;
+}
+
+#nav-links {
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.5em;
+}
+
 /* Mobile */
 @media screen and (max-width: 480px) {
 	#main-logo {
@@ -29,6 +39,17 @@ html {
 
 	p {
 		font-size: 14.5px;
+	}
+
+	#nav-links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 1.5em;
+	}
+
+	#nav-links > a {
+		padding: 5px 0;
 	}
 }
 
@@ -77,14 +98,4 @@ html {
 #main-logo {
 	padding-bottom: 56.25%;
 	background-size: contain;
-}
-
-#happy-kitty-image {
-	max-width: 100%;
-}
-
-#nav-links {
-	display: flex;
-	justify-content: space-around;
-	font-size: 1.5em;
 }
