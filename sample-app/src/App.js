@@ -3,6 +3,20 @@ import React from 'react';
 function App() {
 	return (
 		<>
+			<nav id="nav-links">
+				<a href="link1.html" title="link 1">
+					Link 1
+				</a>
+				<a href="link2.html" title="link 2">
+					Link 2
+				</a>
+				<a href="link3.html" title="link 3">
+					Link 3
+				</a>
+				<a href="link4.html" title="link 4">
+					Link 4
+				</a>
+			</nav>
 			<header>
 				<h1 id="site-header">Welcome To My Super Responsive Site!</h1>
 			</header>
@@ -28,6 +42,7 @@ function App() {
 						src="./images/happy-kitty-1800x1200.jpg"
 						alt="The happiest kitty"
 						id="happy-kitty-image"
+						title="The Happiest Kitty"
 					/>
 					<p>
 						Umami taxidermy quis neutra. Brooklyn street art fam veniam PBR&B

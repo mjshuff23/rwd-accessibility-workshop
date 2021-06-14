@@ -82,3 +82,9 @@ html {
 #happy-kitty-image {
 	max-width: 100%;
 }
+
+#nav-links {
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.5em;
+}
