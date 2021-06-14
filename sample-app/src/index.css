@@ -19,6 +19,7 @@ html {
 	display: flex;
 	justify-content: space-around;
 	font-size: 1.5em;
+	padding: 10px 0 0 0;
 }
 
 /* Mobile */
@@ -38,7 +39,7 @@ html {
 	}
 
 	p {
-		font-size: 14.5px;
+		font-size: 19.5px;
 	}
 
 	#nav-links {
@@ -70,7 +71,7 @@ html {
 	}
 
 	p {
-		font-size: 14.5px;
+		font-size: 19.5px;
 	}
 }
 
@@ -91,11 +92,25 @@ html {
 	}
 
 	p {
-		font-size: 1.4vw;
+		font-size: calc(5px + 1.4vw);
 	}
 }
 
 #main-logo {
-	padding-bottom: 56.25%;
+	padding-bottom: 50%;
 	background-size: contain;
+}
+
+#section-one,
+#section-two,
+nav,
+header {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+#main-header,
+#section-two-header,
+header {
+	text-align: center;
 }
