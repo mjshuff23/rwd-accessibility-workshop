@@ -11,10 +11,44 @@ html {
 	box-sizing: inherit;
 }
 
+#happy-kitty-image {
+	max-width: 100%;
+}
+
+#nav-links {
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.5em;
+	padding-top: 10px;
+}
+
 /* Mobile */
 @media screen and (max-width: 480px) {
 	#main-logo {
 		background: url('./images/rwd-main-logo-450x236.png') no-repeat;
+		max-width: 100%;
+	}
+
+	#nav-links {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#nav-links > a {
+		padding: 5px 0;
+	}
+
+	#site-header {
+		font-size: 2.4em;
+	}
+
+	#main-header,
+	#section-two-header {
+		font-size: 1.9em;
+	}
+
+	p {
+		font-size: 1.4em;
 	}
 }
 
@@ -22,6 +56,20 @@ html {
 @media screen and (min-width: 480px) and (max-width: 1024px) {
 	#main-logo {
 		background: url('./images/rwd-main-logo-600x314.png') no-repeat;
+		max-width: 100%;
+	}
+
+	#site-header {
+		font-size: 2.4em;
+	}
+
+	#main-header,
+	#section-two-header {
+		font-size: 1.9em;
+	}
+
+	p {
+		font-size: 1.6em;
 	}
 }
 
@@ -29,21 +77,38 @@ html {
 @media screen and (min-width: 1025px) {
 	#main-logo {
 		background: url('./images/rwd-main-logo-1200x628.png') no-repeat;
+		max-width: 100%;
+	}
+
+	#site-header {
+		font-size: 4vw;
+	}
+
+	#main-header,
+	#section-two-header {
+		font-size: 3vw;
+	}
+
+	p {
+		font-size: calc(5px + 1.6vw);
 	}
 }
 
 #main-logo {
+	padding-bottom: 56.25%;
+	background-size: contain;
 }
 
-#site-header {
-	font-size: 7vw;
+#section-one,
+#section-two,
+#nav-links,
+header {
+	max-width: 80%;
+	margin: 0 auto;
 }
 
 #main-header,
-#section-two-header {
-	font-size: 5vw;
-}
-
-p {
-	font-size: 3vw;
+#section-two-header,
+#site-header {
+	text-align: center;
 }
