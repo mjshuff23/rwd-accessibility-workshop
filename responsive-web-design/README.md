@@ -19,6 +19,7 @@ It is important to design for smaller devices and move to larger and larger devi
    - [CSS Tricks - Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 2. ### **Grid**
    - [CSS Tricks - Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+   - [Interactive CSS Grid Generator](https://grid.layoutit.com/)
 3. ### **Media Queries**
    - [Using Media Queries - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
    - [Testing Media Queries with JS - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
