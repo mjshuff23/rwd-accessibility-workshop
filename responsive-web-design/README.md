@@ -22,3 +22,5 @@ It is important to design for smaller devices and move to larger and larger devi
 3. ### **Media Queries**
    - [Using Media Queries - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
    - [Testing Media Queries with JS - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+4. ### **Resources**
+   - [Responsive Web Design - Ethan Marcotte](https://alistapart.com/article/responsive-web-design/)

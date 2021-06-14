@@ -17,6 +17,19 @@ html {
 		background: url('./images/rwd-main-logo-450x236.png') no-repeat;
 		max-width: 100%;
 	}
+
+	#site-header {
+		font-size: 2.4em;
+	}
+
+	#main-header,
+	#section-two-header {
+		font-size: 1.9em;
+	}
+
+	p {
+		font-size: 100%;
+	}
 }
 
 /* Tablet */
@@ -26,8 +39,17 @@ html {
 		max-width: 100%;
 	}
 
+	#site-header {
+		font-size: 2.4em;
+	}
+
+	#main-header,
+	#section-two-header {
+		font-size: 1.9em;
+	}
+
 	p {
-		font-size: 20px;
+		font-size: 100%;
 	}
 }
 
@@ -48,7 +70,7 @@ html {
 	}
 
 	p {
-		font-size: 2vw;
+		font-size: 1.4vw;
 	}
 }
 
