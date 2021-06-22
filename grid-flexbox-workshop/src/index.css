@@ -1,4 +1,4 @@
-/* TODO Add site wide styles */
+/**** START html, body, and box-sizing ****/
 html {
 	box-sizing: border-box;
 }
@@ -10,6 +10,13 @@ html {
 	box-sizing: inherit;
 }
 
+body {
+	margin: 0;
+	background-color: #ff7e02;
+}
+/**** END html, body, and box-sizing ****/
+
+/**** START link styling ****/
 a {
 	color: #fff102;
 	text-decoration: none;
@@ -28,17 +35,17 @@ a:visited:hover {
 a:visited {
 	color: black;
 }
+/**** END link styling ****/
 
-body {
-	margin: 0;
-	background-color: #ff7e02;
-}
-
+/* Responsive image styling */
 img {
+	/* max-width: 100% - Allows image to become smaller, but not larger than it's original size */
 	max-width: 100%;
+	/* object-fit: contain - Resizes image to fit container, while maintaining aspect ratio */
 	object-fit: contain;
 }
 
+/**** START Grid for entire single page app layout ****/
 .container {
 	display: grid;
 	grid-template-columns: 0.5fr 2.2fr 0.4fr;
@@ -53,6 +60,19 @@ img {
 	height: 100vh;
 }
 
+/* Logo - Row 1, Column 1 */
+.Logo {
+	grid-area: Logo;
+	display: flex;
+	justify-content: center;
+	min-width: 100px;
+}
+
+.Logo > img {
+	padding: 10px 5px;
+}
+
+/* Header - Row 1, Column 2 */
 .Header {
 	display: flex;
 	grid-area: Header;
@@ -60,6 +80,7 @@ img {
 	min-width: 275px;
 }
 
+/* Profile - Row 1, Column 3 */
 .Profile {
 	grid-area: Profile;
 	display: flex;
@@ -73,25 +94,7 @@ img {
 	padding: 10px 0;
 }
 
-.Footer {
-	grid-area: Footer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.5em;
-}
-
-.Main {
-	grid-area: Main;
-	overflow: scroll;
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
-}
-
-.Main::-webkit-scrollbar {
-	display: none;
-}
-
+/* Nav - Row 2, Column 1 */
 .Nav {
 	grid-area: Nav;
 	display: flex;
@@ -107,17 +110,30 @@ img {
 	text-align: center;
 }
 
-.Logo {
-	grid-area: Logo;
+/* Main - Row 2, Column 2 + 3 */
+.Main {
+	grid-area: Main;
+	overflow: scroll;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.Main::-webkit-scrollbar {
+	display: none;
+}
+
+/* Footer - Row 3, Column 1 + 2 + 3 */
+.Footer {
+	grid-area: Footer;
 	display: flex;
 	justify-content: center;
-	min-width: 100px;
+	align-items: center;
+	font-size: 1.5em;
+	font-weight: bold;
 }
+/**** END Grid for entire single page app layout ****/
 
-.Logo > img {
-	padding: 10px 5px;
-}
-
+/**** START Sub-Grid for main content - Desktop (3 Rows, 4 Columns) ****/
 .gallery-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -186,8 +202,27 @@ div[class^='image-'] {
 	align-items: center;
 	padding: 5px;
 }
+/**** END Sub-Grid for main content - Desktop (3 Rows, 4 Columns) ****/
 
-@media screen and (max-width: 900px) {
+/**** START Sub-Grid for main content - Smaller Desktop (4 Rows, 3 Columns) ****/
+@media screen and (max-width: 1400px) and (min-width: 1000px) {
+	.gallery-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		gap: 3px 3px;
+		grid-auto-flow: row;
+		grid-template-areas:
+			'image-1 image-2 image-3'
+			'image-4 image-5 image-6'
+			'image-7 image-8 image-9'
+			'image-10 image-11 image-12';
+	}
+}
+/**** END Sub-Grid for main content - Smaller Desktop (4 Rows, 3 Columns) ****/
+
+/**** START Sub-Grid for main content - Tablet (6 Rows, 2 Columns) ****/
+@media screen and (max-width: 1000px) {
 	.gallery-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -202,120 +237,11 @@ div[class^='image-'] {
 			'image-9 image-10'
 			'image-11 image-12';
 	}
-
-	.image-1 {
-		grid-area: image-1;
-	}
-
-	.image-2 {
-		grid-area: image-2;
-	}
-
-	.image-3 {
-		grid-area: image-3;
-	}
-
-	.image-4 {
-		grid-area: image-4;
-	}
-
-	.image-5 {
-		grid-area: image-5;
-	}
-
-	.image-6 {
-		grid-area: image-6;
-	}
-
-	.image-7 {
-		grid-area: image-7;
-	}
-
-	.image-8 {
-		grid-area: image-8;
-	}
-
-	.image-9 {
-		grid-area: image-9;
-	}
-
-	.image-10 {
-		grid-area: image-10;
-	}
-
-	.image-11 {
-		grid-area: image-11;
-	}
-
-	.image-12 {
-		grid-area: image-12;
-	}
 }
+/**** END Sub-Grid for main content - Tablet (6 Rows, 2 Columns) ****/
 
-@media screen and (max-width: 1200px) and (min-width: 900px) {
-	.gallery-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr;
-		gap: 3px 3px;
-		grid-auto-flow: row;
-		grid-template-areas:
-			'image-1 image-2 image-3'
-			'image-4 image-5 image-6'
-			'image-7 image-8 image-9'
-			'image-10 image-11 image-12';
-	}
-
-	.image-1 {
-		grid-area: image-1;
-	}
-
-	.image-2 {
-		grid-area: image-2;
-	}
-
-	.image-3 {
-		grid-area: image-3;
-	}
-
-	.image-4 {
-		grid-area: image-4;
-	}
-
-	.image-5 {
-		grid-area: image-5;
-	}
-
-	.image-6 {
-		grid-area: image-6;
-	}
-
-	.image-7 {
-		grid-area: image-7;
-	}
-
-	.image-8 {
-		grid-area: image-8;
-	}
-
-	.image-9 {
-		grid-area: image-9;
-	}
-
-	.image-10 {
-		grid-area: image-10;
-	}
-
-	.image-11 {
-		grid-area: image-11;
-	}
-
-	.image-12 {
-		grid-area: image-12;
-	}
-}
-
-@media screen and (max-width: 600px) {
+/**** START Sub-Grid for main content - Mobile (12 Rows) ****/
+@media screen and (max-width: 700px) {
 	.gallery-container {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -336,52 +262,5 @@ div[class^='image-'] {
 			'image-11'
 			'image-12';
 	}
-
-	.image-1 {
-		grid-area: image-1;
-	}
-
-	.image-2 {
-		grid-area: image-2;
-	}
-
-	.image-3 {
-		grid-area: image-3;
-	}
-
-	.image-4 {
-		grid-area: image-4;
-	}
-
-	.image-5 {
-		grid-area: image-5;
-	}
-
-	.image-6 {
-		grid-area: image-6;
-	}
-
-	.image-7 {
-		grid-area: image-7;
-	}
-
-	.image-8 {
-		grid-area: image-8;
-	}
-
-	.image-9 {
-		grid-area: image-9;
-	}
-
-	.image-10 {
-		grid-area: image-10;
-	}
-
-	.image-11 {
-		grid-area: image-11;
-	}
-
-	.image-12 {
-		grid-area: image-12;
-	}
 }
+/**** END Sub-Grid for main content - Mobile (12 Rows) ****/
