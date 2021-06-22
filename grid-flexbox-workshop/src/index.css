@@ -1,0 +1,387 @@
+/* TODO Add site wide styles */
+html {
+	box-sizing: border-box;
+}
+
+/* inherit border-box on all elements in your app */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	color: #fff102;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+a:visited:hover {
+	color: #fff102;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: black;
+}
+
+body {
+	margin: 0;
+	background-color: #ff7e02;
+}
+
+img {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 0.5fr 2.2fr 0.4fr;
+	grid-template-rows: 10% 80% 10%;
+	gap: 0 0;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'Logo Header Profile'
+		'Nav Main Main'
+		'Footer Footer Footer';
+	width: 100vw;
+	height: 100vh;
+}
+
+.Header {
+	display: flex;
+	grid-area: Header;
+	justify-content: center;
+	min-width: 275px;
+}
+
+.Profile {
+	grid-area: Profile;
+	display: flex;
+	justify-content: center;
+	min-width: 75px;
+}
+
+.Profile > img {
+	width: 25%;
+	min-width: 60px;
+	padding: 10px 0;
+}
+
+.Footer {
+	grid-area: Footer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+}
+
+.Main {
+	grid-area: Main;
+	overflow: scroll;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.Main::-webkit-scrollbar {
+	display: none;
+}
+
+.Nav {
+	grid-area: Nav;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 10px;
+	font-size: 3.5em;
+	font-family: 'Saiyan Sans';
+	justify-content: space-around;
+}
+
+.Nav > a {
+	padding: 0 10px;
+	text-align: center;
+}
+
+.Logo {
+	grid-area: Logo;
+	display: flex;
+	justify-content: center;
+	min-width: 100px;
+}
+
+.Logo > img {
+	padding: 10px 5px;
+}
+
+.gallery-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 3px 3px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'image-1 image-2 image-3 image-4'
+		'image-5 image-6 image-7 image-8'
+		'image-9 image-10 image-11 image-12';
+	padding: 20px;
+	height: 100%;
+}
+
+.image-1 {
+	grid-area: image-1;
+}
+
+.image-2 {
+	grid-area: image-2;
+}
+
+.image-3 {
+	grid-area: image-3;
+}
+
+.image-4 {
+	grid-area: image-4;
+}
+
+.image-5 {
+	grid-area: image-5;
+}
+
+.image-6 {
+	grid-area: image-6;
+}
+
+.image-7 {
+	grid-area: image-7;
+}
+
+.image-8 {
+	grid-area: image-8;
+}
+
+.image-9 {
+	grid-area: image-9;
+}
+
+.image-10 {
+	grid-area: image-10;
+}
+
+.image-11 {
+	grid-area: image-11;
+}
+
+.image-12 {
+	grid-area: image-12;
+}
+
+div[class^='image-'] {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
+
+@media screen and (max-width: 900px) {
+	.gallery-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+		gap: 3px 3px;
+		grid-auto-flow: row;
+		grid-template-areas:
+			'image-1 image-2'
+			'image-3 image-4'
+			'image-5 image-6'
+			'image-7 image-8'
+			'image-9 image-10'
+			'image-11 image-12';
+	}
+
+	.image-1 {
+		grid-area: image-1;
+	}
+
+	.image-2 {
+		grid-area: image-2;
+	}
+
+	.image-3 {
+		grid-area: image-3;
+	}
+
+	.image-4 {
+		grid-area: image-4;
+	}
+
+	.image-5 {
+		grid-area: image-5;
+	}
+
+	.image-6 {
+		grid-area: image-6;
+	}
+
+	.image-7 {
+		grid-area: image-7;
+	}
+
+	.image-8 {
+		grid-area: image-8;
+	}
+
+	.image-9 {
+		grid-area: image-9;
+	}
+
+	.image-10 {
+		grid-area: image-10;
+	}
+
+	.image-11 {
+		grid-area: image-11;
+	}
+
+	.image-12 {
+		grid-area: image-12;
+	}
+}
+
+@media screen and (max-width: 1200px) and (min-width: 900px) {
+	.gallery-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		gap: 3px 3px;
+		grid-auto-flow: row;
+		grid-template-areas:
+			'image-1 image-2 image-3'
+			'image-4 image-5 image-6'
+			'image-7 image-8 image-9'
+			'image-10 image-11 image-12';
+	}
+
+	.image-1 {
+		grid-area: image-1;
+	}
+
+	.image-2 {
+		grid-area: image-2;
+	}
+
+	.image-3 {
+		grid-area: image-3;
+	}
+
+	.image-4 {
+		grid-area: image-4;
+	}
+
+	.image-5 {
+		grid-area: image-5;
+	}
+
+	.image-6 {
+		grid-area: image-6;
+	}
+
+	.image-7 {
+		grid-area: image-7;
+	}
+
+	.image-8 {
+		grid-area: image-8;
+	}
+
+	.image-9 {
+		grid-area: image-9;
+	}
+
+	.image-10 {
+		grid-area: image-10;
+	}
+
+	.image-11 {
+		grid-area: image-11;
+	}
+
+	.image-12 {
+		grid-area: image-12;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.gallery-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		gap: 3px 3px;
+		grid-auto-flow: row;
+		grid-template-areas:
+			'image-1'
+			'image-2'
+			'image-3'
+			'image-4'
+			'image-5'
+			'image-6'
+			'image-7'
+			'image-8'
+			'image-9'
+			'image-10'
+			'image-11'
+			'image-12';
+	}
+
+	.image-1 {
+		grid-area: image-1;
+	}
+
+	.image-2 {
+		grid-area: image-2;
+	}
+
+	.image-3 {
+		grid-area: image-3;
+	}
+
+	.image-4 {
+		grid-area: image-4;
+	}
+
+	.image-5 {
+		grid-area: image-5;
+	}
+
+	.image-6 {
+		grid-area: image-6;
+	}
+
+	.image-7 {
+		grid-area: image-7;
+	}
+
+	.image-8 {
+		grid-area: image-8;
+	}
+
+	.image-9 {
+		grid-area: image-9;
+	}
+
+	.image-10 {
+		grid-area: image-10;
+	}
+
+	.image-11 {
+		grid-area: image-11;
+	}
+
+	.image-12 {
+		grid-area: image-12;
+	}
+}
