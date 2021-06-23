@@ -230,7 +230,7 @@ div[class^='image-'] {
 /**** END Sub-Grid for main content - Tablet (6 Rows, 2 Columns) ****/
 
 /**** START Sub-Grid for main content - Mobile (12 Rows) ****/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 	.gallery-container {
 		display: grid;
 		grid-template-columns: 1fr;

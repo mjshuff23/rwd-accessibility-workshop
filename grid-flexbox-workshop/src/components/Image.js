@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Image({ imageNumber }) {
+function Image({ imageNumber, description }) {
 	return (
 		<div>
 			<div className={`image-${imageNumber}`}>
@@ -9,7 +9,11 @@ function Image({ imageNumber }) {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<img src={`images/main-${imageNumber}.jpg`} alt="" />
+					<img
+						src={`images/main-${imageNumber}.jpg`}
+						alt={description}
+						title={description}
+					/>
 				</a>
 			</div>
 		</div>
