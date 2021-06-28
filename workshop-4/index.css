@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 #skiplink {
 	position: absolute;
 	transform: translateY(-250%);
@@ -8,7 +12,9 @@
 }
 
 .animated-box {
+	position: relative;
 	animation: pulse 1s linear infinite both;
+	left: 5%;
 }
 
 /* @media (prefers-color-scheme: dark) {
