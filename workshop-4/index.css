@@ -1,0 +1,79 @@
+#skiplink {
+	position: absolute;
+	transform: translateY(-250%);
+}
+
+#skiplink:focus {
+	transform: translateY(-75%);
+}
+
+.animated-box {
+	animation: pulse 1s linear infinite both;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+		color: white;
+	}
+} */
+
+@media (prefers-reduced-motion) {
+	.animated-box {
+		animation: animationFrames linear 2s;
+		animation-iteration-count: 1;
+		-webkit-animation: animationFrames linear 2s;
+		-webkit-animation-iteration-count: 1;
+		-moz-animation: animationFrames linear 2s;
+		-moz-animation-iteration-count: 1;
+		-o-animation: animationFrames linear 2s;
+		-o-animation-iteration-count: 1;
+		-ms-animation: animationFrames linear 2s;
+		-ms-animation-iteration-count: 1;
+	}
+
+	@keyframes animationFrames {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-moz-keyframes animationFrames {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes animationFrames {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-o-keyframes animationFrames {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-ms-keyframes animationFrames {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}
