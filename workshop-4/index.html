@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="index.js"></script>
+		<link rel="stylesheet" href="index.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- Always use HTML5 semantic elements -->
+		<header>
+			<a id="skiplink" href="#beginning">Skip to Main Content</a>
+			<h1>Header</h1>
+		</header>
+
+		<nav>
+			<!-- main navigation in here -->
+		</nav>
+
+		<!-- Here is our page's main content -->
+		<main>
+			<!-- assertive - will interrupt whatever it's doing to announce.
+           polite - will announce the live region update when it next idles.
+           off - will not read the update. -->
+			<div class="animated-box" id="beginning" aria-live="assertive">
+				Current image: T-Rex
+			</div>
+			<!-- img alt and title attributes -->
+			<img
+				src="images/dinosaur.png"
+				alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
+				title="The Mozilla red dinosaur"
+			/>
+
+			<!-- It contains an article -->
+			<article>
+				<h2>Article heading</h2>
+
+				<!-- element inherent functionality -->
+				<button onclick="alert('hello')">Click me!</button>
+
+				<!-- Tabindex values
+              - a negative value means that the element should be focusable, but should not be reachable via sequential keyboard navigation;
+              - 0 means that the element should be focusable and reachable via sequential keyboard navigation, but its relative order is defined by the platform convention;
+              - a positive value means should be focusable and reachable via sequential keyboard navigation; its relative order is defined by the value of the attribute: the sequential follow the increasing number of the tabindex. If several elements share the same tabindex, their relative order follows their relative position in the document. -->
+				<div
+					aria-label="Alert the word hello"
+					tabindex="0"
+					role="button"
+					onclick="alert('hello')"
+					onkeyup="alert('hello')"
+				>
+					Click me!
+				</div>
+
+				<!-- aria role example -->
+				<div id="radio_label">My radio label</div>
+				<ul role="radiogroup" aria-labelledby="radio_label">
+					<li role="radio">Item #1</li>
+					<li role="radio">Item #2</li>
+					<li role="radio">Item #3</li>
+				</ul>
+
+				<!-- aria-labelledby example -->
+				<div id="myBillingId">Billing</div>
+				<div>
+					<div id="myNameId">Name</div>
+					<input type="text" aria-labelledby="myBillingId myNameId" />
+				</div>
+				<div>
+					<div id="myAddressId">Address</div>
+					<input type="text" aria-labelledby="myBillingId myAddressId" />
+				</div>
+
+				<!-- aria-label and describedby example -->
+				<button
+					aria-label="Close"
+					aria-describedby="descriptionClose"
+					onclick="alert('closing')"
+				>
+					X
+				</button>
+
+				<div id="descriptionClose">
+					Closing this window will discard any information entered and return
+					you back to the main page
+				</div>
+
+				<!-- meaningful text labels -->
+				<p>
+					Whales are really awesome creatures.
+					<a href="whales.html">Find out more about whales</a>.
+				</p>
+
+				<!-- article content in here -->
+			</article>
+
+			<aside>
+				<h2>Related</h2>
+				<form>
+					<!-- implicit labelling -->
+					<label>
+						First Name
+						<input id="first" type="text" />
+					</label>
+					<label>
+						Last Name
+						<input id="last" type="text" />
+					</label>
+					<label>
+						Password
+						<input id="password" type="password" />
+					</label>
+					<input type="submit" value="Submit" />
+				</form>
+				<!-- aside content in here -->
+				<form>
+					<label for="first">First Name</label>
+					<input id="first" type="text" />
+					<label for="last">Last Name</label>
+					<input id="last" type="text" />
+					<label for="password">Password</label>
+					<input id="password" type="password" />
+					<input type="submit" value="Submit" />
+				</form>
+			</aside>
+		</main>
+
+		<!-- And here is our main footer that is used across all the pages of our website -->
+
+		<footer>
+			<!-- footer content in here -->
+		</footer>
+	</body>
+</html>
