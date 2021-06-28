@@ -7,7 +7,7 @@ A workshop geared toward making your application viewable on any device, whether
 - [Workshop 1 Slide - Why RWD & Accessibility](https://docs.google.com/presentation/d/1JGjbt-jYxRzizutZudQR5uj_-GDjkLu2UuBsLW2pU4U/edit?usp=sharing)
 - [Workshop 1 Recording](https://drive.google.com/file/d/1opxEqOBV5uLURnLHCPE0nnU5nVHs2aSe/view?usp=sharing)
 - [Workshop 2 Recording](https://drive.google.com/file/d/1opxEqOBV5uLURnLHCPE0nnU5nVHs2aSe/view?usp=sharing)
-- [Workshop 3 Recording - CSS Grid & Flexbox (Password: D$r&?U9j)](https://us02web.zoom.us/rec/share/vvxVyxBfOZafd-u33GP7ojKwBcLf2TJWsuSKeBsh-xCw8KvTA5Sofg-3v0EpYOSQ.tuJLOgZibd05YK8L)
+- [Workshop 3 Recording - CSS Grid & Flexbox](https://us02web.zoom.us/rec/share/vvxVyxBfOZafd-u33GP7ojKwBcLf2TJWsuSKeBsh-xCw8KvTA5Sofg-3v0EpYOSQ.tuJLOgZibd05YK8L) Password: D$r&?U9j
 
 ## **Goals**
 
