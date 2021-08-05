@@ -21,7 +21,7 @@ function Main() {
 	];
 
 	return (
-		<div className="Main">
+		<main className="Main">
 			<div className="gallery-container">
 				{images.map(({ imageNumber, description }, index) => (
 					<Image
@@ -31,7 +31,7 @@ function Main() {
 					/>
 				))}
 			</div>
-		</div>
+		</main>
 	);
 }
 

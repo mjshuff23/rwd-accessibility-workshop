@@ -24,6 +24,10 @@ body {
 	}
 } */
 
+label {
+	display: none;
+}
+
 @media (prefers-reduced-motion) {
 	.animated-box {
 		animation: animationFrames linear 2s;
