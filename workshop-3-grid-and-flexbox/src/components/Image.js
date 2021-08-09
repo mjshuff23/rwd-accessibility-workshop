@@ -2,7 +2,7 @@ import React from 'react';
 
 function Image({ imageNumber, description }) {
 	return (
-		<div className={`image-${imageNumber}`}>
+		<figure className={`image-${imageNumber}`}>
 			<a
 				href={`images/main-${imageNumber}.jpg`}
 				target="_blank"
@@ -14,7 +14,7 @@ function Image({ imageNumber, description }) {
 					title={description}
 				/>
 			</a>
-		</div>
+		</figure>
 	);
 }
 

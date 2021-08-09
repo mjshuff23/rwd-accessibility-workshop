@@ -62,7 +62,7 @@
 	grid-area: image-12;
 }
 
-div[class^='image-'] {
+figure[class^='image-'] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
