@@ -1,0 +1,9 @@
+/* Footer - Row 3, Column 1 + 2 + 3 */
+.Footer {
+	grid-area: Footer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}

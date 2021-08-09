@@ -1,0 +1,11 @@
+/* Logo - Row 1, Column 1 */
+.Logo {
+	grid-area: Logo;
+	display: flex;
+	justify-content: center;
+	min-width: 100px;
+}
+
+.Logo > img {
+	padding: 10px 5px;
+}
