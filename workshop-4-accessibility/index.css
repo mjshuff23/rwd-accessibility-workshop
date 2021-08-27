@@ -1,7 +1,11 @@
 body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	overflow-x: hidden;
 }
 
+/* Keep it hidden unless focused */
 #skiplink {
 	position: absolute;
 	transform: translateY(-250%);
@@ -11,12 +15,7 @@ body {
 	transform: translateY(-75%);
 }
 
-.animated-box {
-	position: relative;
-	animation: pulse 1s linear infinite both;
-	left: 5%;
-}
-
+/* Can determine preferred color scheme from OS */
 /* @media (prefers-color-scheme: dark) {
 	body {
 		background-color: black;
@@ -24,10 +23,13 @@ body {
 	}
 } */
 
-label {
-	display: none;
+.animated-box {
+	position: relative;
+	animation: pulse 1s linear infinite both;
+	left: 5%;
 }
 
+/* Can figure this out based on OS settings */
 @media (prefers-reduced-motion) {
 	.animated-box {
 		animation: animationFrames linear 2s;
@@ -86,4 +88,8 @@ label {
 			opacity: 1;
 		}
 	}
+}
+
+label {
+	display: none;
 }

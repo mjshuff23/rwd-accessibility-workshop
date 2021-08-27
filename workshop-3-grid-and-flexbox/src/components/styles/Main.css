@@ -1,0 +1,29 @@
+/* Main - Row 2, Column 2 + 3 */
+.Main {
+	grid-area: Main;
+	overflow: scroll;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.Main::-webkit-scrollbar {
+	display: none;
+}
+
+/**** START Sub-Grid for main content - Desktop (3 Rows, 4 Columns) ****/
+.gallery-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-rows: auto;
+	gap: 3px 3px;
+	/* grid-template-areas:
+		'image-1 image-2 image-3 image-4'
+		'image-5 image-6 image-7 image-8'
+		'image-9 image-10 image-11 image-12'; */
+	padding: 20px;
+	height: 100%;
+}
+
+div[class^='image-'] {
+	padding: 5px;
+}

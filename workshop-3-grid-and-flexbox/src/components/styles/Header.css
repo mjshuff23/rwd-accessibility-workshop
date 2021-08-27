@@ -1,0 +1,6 @@
+.Header {
+	grid-area: Header;
+	display: flex;
+	justify-content: center;
+	min-width: 275px;
+}

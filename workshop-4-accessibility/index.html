@@ -11,8 +11,11 @@
 	<body>
 		<!-- Always use HTML5 semantic elements -->
 		<header>
+			<!-- A skip link is used on many major sites to allow people to skip to the main content -->
 			<a id="skiplink" href="#beginning">Skip to Main Content</a>
 			<h1>Header</h1>
+			<br />
+			<br />
 		</header>
 
 		<nav>
@@ -21,17 +24,24 @@
 
 		<!-- Here is our page's main content -->
 		<main>
+			<!-- aria-live -->
+			<!-- Assistive technologies will announce dynamic changes in the content of a live region. -->
 			<!-- assertive - will interrupt whatever it's doing to announce.
            polite - will announce the live region update when it next idles.
            off - will not read the update. -->
-			<div class="animated-box" id="beginning" aria-live="assertive">
+			<div class="animated-box" id="beginning" aria-live="polite">
 				Current image: T-Rex
 			</div>
 			<!-- img alt and title attributes -->
-			<img src="images/dinosaur.png" title="The Mozilla red dinosaur" />
+			<img
+				src="images/dinosaur.png"
+				alt="A beautiful dinosaur"
+				title="A beautiful dinosaur"
+			/>
 
-			<!-- It contains an article -->
+			<!-- <article> is for containing related individual standalone pieces of content, such as individual blog posts, videos, images or news items. -->
 			<article>
+				<!-- <section>: Used to either group different articles into different purposes or subjects, or to define the different sections of a single article. -->
 				<section></section>
 				<h2>Article heading</h2>
 
@@ -62,6 +72,8 @@
 				</ul>
 
 				<!-- aria-labelledby example -->
+				<!-- area-labelledby
+				      - The aria-labelledby attribute establishes relationships between objects and their label(s), and its value should be one or more element IDs, which refer to elements that have the text needed for labeling. List multiple element IDs in a space delimited fashion. -->
 				<div id="myBillingId">Billing</div>
 				<div>
 					<div id="myNameId">Name</div>
@@ -73,6 +85,9 @@
 				</div>
 
 				<!-- aria-label and describedby example -->
+				<!-- The aria-label attribute is used to define a string that labels the current element. Use it in cases where a text label is not visible on the screen. If there is visible text labeling the element, use aria-labelledby instead. -->
+
+				<!-- The aria-describedby attribute is used to indicate the IDs of the elements that describe the object. It is used to establish a relationship between widgets or groups and text that described them. This is very similar to aria-labelledby: a label describes the essence of an object, while a description provides more information that the user might need. -->
 				<button
 					aria-label="Close"
 					aria-describedby="descriptionClose"
@@ -86,15 +101,14 @@
 					you back to the main page
 				</div>
 
-				<!-- meaningful text labels -->
+				<!-- meaningful text labels for links -->
 				<p>
 					Whales are really awesome creatures.
 					<a href="whales.html">Find out more about whales</a>.
 				</p>
-
-				<!-- article content in here -->
 			</article>
 
+			<!-- The <aside> HTML element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes. -->
 			<aside>
 				<h2>Related</h2>
 				<form>
@@ -115,7 +129,6 @@
 						<input type="submit-implicit" value="Submit" />
 					</label>
 				</form>
-				<!-- aside content in here -->
 				<form>
 					<label for="first">First Name</label>
 					<input id="first" type="text" />
@@ -128,6 +141,7 @@
 				</form>
 			</aside>
 
+			<!-- The <picture> HTML element contains zero or more <source> elements and one <img> element to offer alternative versions of an image for different display/device scenarios. -->
 			<picture>
 				<source
 					media="(min-width:465px)"
@@ -142,10 +156,7 @@
 			</picture>
 		</main>
 
-		<!-- And here is our main footer that is used across all the pages of our website -->
-
-		<footer>
-			<!-- footer content in here -->
-		</footer>
+		<!-- The <footer> HTML element represents a footer for its nearest sectioning content or sectioning root element. A <footer> typically contains information about the author of the section, copyright data or links to related documents. -->
+		<footer></footer>
 	</body>
 </html>
