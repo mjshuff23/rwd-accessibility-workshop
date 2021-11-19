@@ -23,17 +23,3 @@ img {
 	/* object-fit: contain - Resizes image to fit container, while maintaining aspect ratio */
 	object-fit: contain;
 }
-
-.container {
-	display: grid;
-	grid-template-columns: 0.5fr 2.2fr 0.3fr;
-	grid-template-rows: 10% 80% 10%;
-	gap: 0 0;
-	grid-auto-flow: row;
-	grid-template-areas:
-		'Logo Header Profile'
-		'Nav Main Main'
-		'Footer Footer Footer';
-	height: 100vh;
-	width: 100vw;
-}
