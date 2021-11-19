@@ -24,13 +24,11 @@ function Main() {
 		<main className="Main">
 			<div className="gallery-container">
 				{images.map(({ imageNumber, description }, index) => (
-					<div>
 						<Image
 							imageNumber={imageNumber}
 							description={description}
 							key={`image-${index}`}
 						/>
-					</div>
 				))}
 			</div>
 		</main>
